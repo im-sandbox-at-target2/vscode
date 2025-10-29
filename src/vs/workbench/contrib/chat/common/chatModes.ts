@@ -186,7 +186,9 @@ export class ChatModeService extends Disposable implements IChatModeService {
 		if (fireChangeEvent) {
 			this._onDidChangeChatModes.fire();
 		}
-	} getModes(): { builtin: readonly IChatMode[]; custom: readonly IChatMode[] } {
+	}
+
+	getModes(): { builtin: readonly IChatMode[]; custom: readonly IChatMode[] } {
 		return {
 			builtin: this.getBuiltinModes(),
 			custom: this.getCustomModes(),
